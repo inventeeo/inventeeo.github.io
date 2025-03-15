@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Moment - Support</title>
+    <style>
+        :root {
+            --primary-color: #81CA94;
+            --primary-dark: #69a87a;
+            --text-light: #f0f0f0;
+            --text-muted: #cccccc;
+            --bg-dark: #454545;
+            --bg-darker: #333333;
+            --accent-color: #54B9D9;
+            --card-bg: #383838;
+            --border-color: #555555;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: var(--bg-darker);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--accent-color);
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--text-light);
+            margin-right: auto;
+        }
+        
+        .nav {
+            display: flex;
+        }
+        
+        .nav-item {
+            margin-left: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-item:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .feature-section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .language-item {
+            background-color: var(--card-bg);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .contact-section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        
+        .contact-section h2 {
+            display: block;
+            text-align: left;
+        }
+        
+        .contact-section .btn {
+            background-color: #81ca8e;
+            color: #333;
+            padding: 10px 30px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+            text-decoration: none;
+        }
+        
+        .update-section {
+            margin-top: 50px;
+        }
+        
+        .update-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .update-version {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: var(--bg-darker);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Text Moment</div>
+        <div class="nav">
+            <a href="index.html" class="nav-item">Privacy Policy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>Text Moment Support</h1>
+            <p>Welcome to the official support page for Text Moment, your AI-powered text scanning companion.</p>
+        </div>
+        
+        <h2><span class="icon">📱</span>Features</h2>
+        <div class="feature-section">
+            <div class="feature-card">
+                <h3>Free Features</h3>
+                <ul>
+                    <li>On Device Machine Learning OCR</li>
+                    <li>Offline Processing</li>
+                    <li>Basic Text Recognition</li>
+                    <li>PDF Document Scanning</li>
+                    <li>Multi-language Support</li>
+                    <li>QR/Barcode Scanning</li>
+                    <li>5 AI scan credits/month</li>
+                </ul>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Premium Features (Basic Subscription)</h3>
+                <ul>
+                    <li>Everything in Free, plus:</li>
+                    <li>Multi-image scanning</li>
+                    <li>AI-enhanced OCR & PDF processing</li>
+                    <li>AI Receipt formatting</li>
+                    <li>AI Handwritten Recognition</li>
+                    <li>AI Math Solver</li>
+                    <li>AI-Enhanced Translation</li>
+                    <li>100 AI scan credits/month</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2><span class="icon">🤔</span>Frequently Asked Questions (FAQ)</h2>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">How do I scan multiple pages? (if enabled)</h3>
+            <ol>
+                <li>Open the app</li>
+                <li>Tap "Image Scan"</li>
+                <li>Capture each page</li>
+                <li>Tap Image Counting numbers on top right area when finished</li>
+            </ol>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">Does the app work offline?</h3>
+            <p>Yes! All basic scanning and text recognition features work without internet connection. AI-enhanced features require internet connectivity.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">What are AI scan credits?</h3>
+            <p>AI scan credits allow you to use advanced AI features like enhanced OCR, Handwritten Recognition, Receipt formatting, math solving, and translation. Free users receive 5 credits per month, while subscribers receive 100 credits per month.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">How do I subscribe to the Basic plan?</h3>
+            <ol>
+                <li>Open the app</li>
+                <li>Tap on "Settings" or look for subscription options</li>
+                <li>Select "Basic" plan at $2.49/month</li>
+                <li>Complete the purchase through Apple's payment system</li>
+            </ol>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">How do I cancel my subscription?</h3>
+            <p><strong>iOS:</strong> Subscriptions can be managed through your Apple ID in your device settings:</p>
+            <ol>
+                <li>Open the <strong>Settings</strong> app on your iPhone.</li>
+                <li>Tap on <strong>[Your Name]</strong> at the top of the Settings menu.</li>
+                <li>Tap on <strong>Subscriptions</strong>.</li>
+                <li>Find <strong>Text Moment</strong> in the list of active subscriptions and tap on it.</li>
+                <li>Tap <strong>Cancel Subscription</strong>.</li>
+                <li>Confirm the cancellation when prompted.</li>
+            </ol>
+            
+            <p><strong>Android:</strong> Subscriptions can be managed through your Google Play account:</p>
+            <ol>
+                <li>Open the Google Play Store app on your Android device.</li>
+                <li>Tap your profile icon in the top right corner.</li>
+                <li>Select "Payments & subscriptions" > "Subscriptions".</li>
+                <li>Find "Text Moment" in the list of subscriptions and tap on it.</li>
+                <li>Tap "Cancel subscription" and follow the on-screen instructions.</li>
+            </ol>
+        </div>
+        
+        <div class="faq-item">
+            <h3 class="faq-question">Which languages are supported?</h3>
+            <div class="languages-grid">
+                <div class="language-item">Afrikaans</div>
+                <div class="language-item">Albanian</div>
+                <div class="language-item">Catalan</div>
+                <div class="language-item">Chinese</div>
+                <div class="language-item">Croatian</div>
+                <div class="language-item">Czech</div>
+                <div class="language-item">Danish</div>
+                <div class="language-item">Dutch</div>
+                <div class="language-item">English</div>
+                <div class="language-item">Estonian</div>
+                <div class="language-item">Filipino</div>
+                <div class="language-item">Finnish</div>
+                <div class="language-item">French</div>
+                <div class="language-item">German</div>
+                <div class="language-item">Hindi</div>
+                <div class="language-item">Hungarian</div>
+                <div class="language-item">Icelandic</div>
+                <div class="language-item">Indonesian</div>
+                <div class="language-item">Italian</div>
+                <div class="language-item">Japanese</div>
+                <div class="language-item">Korean</div>
+                <div class="language-item">Latvian</div>
+                <div class="language-item">Lithuanian</div>
+                <div class="language-item">Malay</div>
+                <div class="language-item">Marathi</div>
+                <div class="language-item">Nepali</div>
+                <div class="language-item">Norwegian</div>
+                <div class="language-item">Polish</div>
+                <div class="language-item">Portuguese</div>
+                <div class="language-item">Romanian</div>
+                <div class="language-item">Serbian</div>
+                <div class="language-item">Slovak</div>
+                <div class="language-item">Slovenian</div>
+                <div class="language-item">Spanish</div>
+                <div class="language-item">Swedish</div>
+                <div class="language-item">Turkish</div>
+                <div class="language-item">Vietnamese</div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h2><span class="icon">📧</span>Contact Support</h2>
+            <p>Having issues? Please:</p>
+            <ol>
+                <li>Check the FAQ above</li>
+                <li>Search existing <a href="https://github.com/inventeeo/textmoment-support/issues" target="_blank">Issues</a></li>
+                <li>Create a new issue if needed</li>
+                <li>Or email us: <a href="mailto:apps@inventeeo.com">apps@inventeeo.com</a></li>
+            </ol>
+            <a href="mailto:apps@inventeeo.com" class="btn">Email Support</a>
+        </div>
+        
+        <div class="update-section">
+            <h2><span class="icon">🆕</span>Latest Updates</h2>
+            
+            <div class="update-item">
+                <div class="update-version">Version 2.0.x: AI Features Update</div>
+                <ul>
+                    <li>Added subscription model with Basic tier</li>
+                    <li>AI-enhanced OCR & PDF processing</li>
+                    <li>Handwritten text recognition</li>
+                    <li>Math problem solving</li>
+                    <li>Enhanced translation</li>
+                    <li>Receipt formatting</li>
+                    <li>Credit system for AI features</li>
+                </ul>
+            </div>
+            
+            <div class="update-item">
+                <div class="update-version">Version 1.x.x: Basic Feature release</div>
+                <ul>
+                    <li>On Device Machine Learning OCR</li>
+                    <li>Basic Text Recognition</li>
+                    <li>Offline processing</li>
+                    <li>Multi-language support</li>
+                    <li>PDF scanning</li>
+                    <li>QR/Barcode code reading</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p><a href="index.html">Privacy Policy</a> | © 2024 <a href="https://www.inventeeo.com" target="_blank">Inventeeo Tech, LLC.</a> All rights reserved.</p>
+    </footer>
+</body>
+</html>
