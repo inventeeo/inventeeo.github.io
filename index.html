@@ -3,87 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Text Moment App</title>
+    <title>Text Moment - Privacy Policy</title>
+    <style>
+        :root {
+            --primary-color: #81CA94;
+            --primary-dark: #69a87a;
+            --text-light: #f0f0f0;
+            --text-muted: #cccccc;
+            --bg-dark: #454545;
+            --bg-darker: #333333;
+            --accent-color: #54B9D9;
+            --card-bg: #383838;
+            --border-color: #555555;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #454545;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: #333333;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #54B9D9;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-right: auto;
+        }
+        
+        .nav {
+            display: flex;
+        }
+        
+        .nav-item {
+            margin-left: 20px;
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-item:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .date {
+            color: #cccccc;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: #81CA94;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--bg-darker);
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>Privacy Policy</h1>
-
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>Our Text Moment app is committed to protecting your privacy. This Privacy Policy explains our practices regarding data collection, use, and disclosure[cite: 1, 2].</p>
-    </section>
-
-    <section id="key-privacy-points">
+    <div class="header">
+        <div class="logo">Text Moment</div>
+        <div class="nav">
+            <a href="support.html" class="nav-item">Support</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <div class="date">Last updated on March 15, 2025</div>
+        
+        <p>Our Text Moment app is committed to protecting your privacy. This Privacy Policy explains our practices regarding data collection, use, and disclosure.</p>
+        
         <h2>Key Privacy Points</h2>
         <ul>
-            <li>Data Transmission: For AI features, content is temporarily transmitted to API services for processing but is not collected or stored by us[cite: 2].</li>
-            <li>Mixed Processing: While basic scanning happens locally on your device, AI features require processing via secure external APIs[cite: 3].</li>
-            <li>Limited Analytics: We collect minimal, anonymous usage data solely to improve app functionality and fix technical issues[cite: 4].</li>
-            <li>Local Storage Only: All scanned documents are stored only on your device[cite: 5].</li>
-            <li>Selective Network Access: The app operates offline for basic features but requires internet connection for AI functionality[cite: 6].</li>
+            <li>Data Transmission: For AI features, content is temporarily transmitted to API services for processing but is not collected or stored by us.</li>
+            <li>Mixed Processing: While basic scanning happens locally on your device, AI features require processing via secure external APIs.</li>
+            <li>Limited Analytics: We collect minimal, anonymous usage data solely to improve app functionality and fix technical issues.</li>
+            <li>Local Storage Only: All scanned documents are stored only on your device.</li>
+            <li>Selective Network Access: The app operates offline for basic features but requires internet connection for AI functionality.</li>
         </ul>
-    </section>
-
-    <section id="app-permissions">
+        
         <h2>App Permissions</h2>
         <p>The app requires the following permissions:</p>
         <ul>
-            <li>Camera: Required for image scanning and QR code reading[cite: 6, 7].</li>
-            <li>Storage: Required to save scanned documents on your device[cite: 7].</li>
-            <li>Internet: Required for AI-powered features and anonymous crash reporting[cite: 7, 8].</li>
+            <li>Camera: Required for image scanning and QR code reading.</li>
+            <li>Storage: Required to save scanned documents on your devices.</li>
+            <li>Internet: Required for AI-powered features and anonymous crash reporting.</li>
         </ul>
-        <p>These permissions are used solely for the app's core functionality and not for advertising[cite: 8]. These permissions are used solely for the app's core functionality and not for commercial data collection[cite: 8, 9].</p>
-    </section>
-
-    <section id="data-processing">
+        <p>These permissions are used solely for the app's core functionality and not for commercial data collection.</p>
+        
         <h2>Data Processing</h2>
         <ul>
-            <li>When using AI features, document content is temporarily transmitted to our secure API providers for processing[cite: 10].</li>
-            <li>We do not store or retain your document content on our servers after processing[cite: 11].</li>
-            <li>The transmission is encrypted using industry-standard protocols[cite: 12].</li>
-            <li>No personally identifying information is linked to your document content[cite: 12].</li>
+            <li>When using AI features, document content is temporarily transmitted to our secure API providers for processing.</li>
+            <li>We do not store or retain your document content on our servers after processing.</li>
+            <li>The transmission is encrypted using industry-standard protocols.</li>
+            <li>No personally identifying information is linked to your document content.</li>
         </ul>
-    </section>
-
-    <section id="analytics-and-crash-reporting">
+        
         <h2>Analytics and Crash Reporting</h2>
         <ul>
-            <li>We use Firebase Analytics to collect anonymous usage statistics that help us improve the app[cite: 13].</li>
-            <li>We collect crash reports through Firebase Crashlytics to identify and fix technical issues[cite: 14].</li>
-            <li>This data is not linked to your identity and contains no information about your document contents[cite: 15].</li>
-            <li>Analytics data we collect includes: app feature usage, session duration, and device information[cite: 16].</li>
-            <li>You can use the app's essential features without an internet connection, which prevents any analytics collection[cite: 17].</li>
+            <li>We use Firebase Analytics to collect anonymous usage statistics that help us improve the app.</li>
+            <li>We collect crash reports through Firebase Crashlytics to identify and fix technical issues.</li>
+            <li>This data is not linked to your identity and contains no information about your document contents.</li>
+            <li>Analytics data we collect includes: app feature usage, session duration, end device information.</li>
+            <li>You can use the app's essential features without an internet connection, which prevents any analytics collection.</li>
         </ul>
-    </section>
-
-    <section id="data-storage">
+        
         <h2>Data Storage</h2>
         <ul>
-            <li>All scanned documents are stored locally in your device's private app storage[cite: 18].</li>
-            <li>You have full control over your data and can delete it at any time[cite: 19].</li>
-            <li>Other apps cannot access the documents stored by our app[cite: 20].</li>
-            <li>We use Firebase Firestore solely to synchronize app settings and do not store document contents online[cite: 21].</li>
+            <li>All scanned documents are stored locally in your device's private app storage.</li>
+            <li>You have full control over your data and can delete it at any time.</li>
+            <li>Other apps cannot access the documents stored by our app.</li>
+            <li>We use Firebase Firestore solely to synchronize app settings and do not store document contents online.</li>
         </ul>
-    </section>
-
-    <section id="childrens-privacy">
+        
         <h2>Children's Privacy</h2>
         <ul>
-            <li>Our app does not collect any personal information from users of any age[cite: 22].</li>
-            <li>The anonymous usage data collected cannot be used to identify individual users[cite: 23].</li>
+            <li>Our app does not collect any personal information from users of any age.</li>
+            <li>The anonymous usage data collected cannot be used to identify individual users.</li>
         </ul>
-    </section>
-
-    <section id="changes-to-this-policy">
+        
         <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page[cite: 23, 24].</p>
-    </section>
-
-    <section id="contact-us">
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+        
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:apps@inventeeo.com">apps@inventeeo.com</a> [cite: 25]</p>
-    </section>
-
+        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:apps@inventeeo.com">apps@inventeeo.com</a></p>
+    </div>
+	
+    <footer>
+        <p><a href="index.html">Privacy Policy</a> | © 2024 <a href="https://www.inventeeo.com" target="_blank">Inventeeo Tech, LLC.</a> All rights reserved.</p>
+    </footer>
 </body>
 </html>
